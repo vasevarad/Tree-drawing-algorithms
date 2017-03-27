@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+DRAWING OF TREES - C. Wetherell and A. Shannon, E. M. Reingold and J. S. Tilford
+</title>
+
+<style>
+body {
+        background-image: url("bakii.jpg");
+        
+}
+ p 
+{
+	margin-left:20px; margin-right:50px; margin-top:20px; margin-bottom:20px; 
+	text-align: left;
+	font-family: Arial,Helvetica,sans-serif;
+}
+h1{
+
+	text-align: center;
+	color:#191970;
+	font-family: Arial,Helvetica,sans-serif;
+}	
+
+h2{
+	margin-left:20px; margin-right:50px; margin-top:20px; margin-bottom:20px;
+	text-align: left;
+	font-family: Arial,Helvetica,sans-serif;
+	color: #4682b4;
+}
+
+h3{
+	margin-left:20px; margin-right:50px; margin-top:20px; margin-bottom:20px;
+	text-align: left;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+img{
+	margin-left:20px; margin-right:50px; margin-top:20px; margin-bottom:20px;
+	
+}
+ 
+</style>
+
+</head>
+
+
+
+<body>
+<h1>IMPLEMENTATION - BINARY TREE DRAWING ALGORITHMS
+</h1>
+<h2>C. Wetherell and A. Shannon</h2>
+<h3>Time Analysis</h3>
+<p>The algorithm was run ten times for each of the  input sizes. The average time was plotted against the input size (number of nodes). The trend was found to be almost linear. </p>
+<img src="WS.png"> 
+<img src="WS_plot.jpg", width="1120px", height="650px"> 
+<h3>Memory Usage</h3>
+<p>Each instance of the structure node is of size 40 Bytes, assuming that an integer takes 4 Bytes. Given n nodes, this would require 40n Bytes. 
+modifier and next_pos arrays are of size h each. In the best case, they would require 4*log(n) bytes and in the worst case 4*n bytes.
+Three matrices trans1, trans2 and scale each of size 36 Bytes was used. </p>
+<h3 >Outputs</h3>
+<img src="10_WS.png", height="800px", width="1200px">
+<img src="50_WS.png", height="800px", width="1200px">
+<img src="100_WS.png", height="800px", width="1200px">
+<img src="200_WS.png", height="800px", width="1200px">
+
+<h2>E. M. Reingold and J. S. Tilford</h2>
+<h3 >Time Analysis</h3>
+<p>The algorithm was run ten times for each of the 9 input sizes. The average time was plotted against the input size (number of nodes). The trend was found to be almost linear. </p>
+<img src="TR.png"> 
+<img src="TR_plot.jpg", width="1120px", height="650px"> 
+<h3>Memory Usage</h3>
+<p>Each instance of the structure node is of size 58 Bytes, assuming that an integer takes 4 Bytes. Given n nodes, this would require 56n Bytes. 
+Three matrices trans1, trans2 and scale each of size 36 Bytes was used. </p>
+<h3>Outputs</h3>
+<img src="10_TR.png", height="800px", width="1200px">
+<img src="50_TR.png", height="700px", width="1200px">
+<img src="100_TR.png", height="700px", width="1200px">
+<img src="200_TR.png", height="700px", width="1200px">
+
+
+<h2>COMPARISON OF TREES - C. WETHERELL AND A. SHANNON  VS. E.M.REINGOLD AND J.S.TILFORD</h2>
+<img src="tr_ws_comp.png", width="1000px";>
+<p>A tree and its mirror image positioned by Reingold and Tilford's algorithm are tidier than those positioned by Wetherell and Shannon's one.</p>
+<img src="31nodews.png", height="700px">
+<img src="31nodetr.png", height="700px">
+<p>Reingold and Tilford's algorithm produces a tidier version of the tree. This is because a subtree is drawn the same no matter where in the tree it lies.</p>
+
+</body>
+
+</html>
